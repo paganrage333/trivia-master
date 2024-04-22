@@ -11,7 +11,7 @@ const Login = ({isLogin}) => {
     const {
         register,
         handleSubmit,
-        formState: { errors },
+        // formState: { errors },
       } = useForm();
 
     const AuthFuncation = (data)=>{
@@ -40,7 +40,7 @@ const Login = ({isLogin}) => {
             notifyError('already logged in')
             navigate('/dashboard')
         }
-    },[])
+    })
   return (
     <div className="min-h-[95vh]  bg-gray-100 text-gray-900 flex justify-center">
     <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">

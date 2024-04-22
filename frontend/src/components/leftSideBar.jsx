@@ -1,4 +1,4 @@
-import React, { useEffect, useState, } from 'react'
+import React from 'react'
 import { Link,useSearchParams } from 'react-router-dom'
 
 export default function LeftSideBar({Cats}) {
@@ -30,7 +30,7 @@ export default function LeftSideBar({Cats}) {
               <Link
               key={i}
                  to={`/dashboard?cat=${e.id}`}
-                className={` group flex  items-center rounded-md px-3 py-2 text-sm font-medium ${ id == e.id ? 'bg-rose-600 text-white':''} text-gray-700 hover:bg-rose-600 hover:text-white`}
+                className={` group flex  items-center rounded-md px-3 py-2 text-sm font-medium ${ id === e.id ? 'bg-rose-600 text-white':''} text-gray-700 hover:bg-rose-600 hover:text-white`}
               >
                 <span className="truncate">{e?.name}</span>
               </Link>

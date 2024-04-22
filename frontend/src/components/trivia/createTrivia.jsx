@@ -18,7 +18,7 @@ export default function CreateTrivia({ setOpenCreateTrivia, Cats,setAddTrivia,qu
   
   
   const onSave = ()=>{
-    if(data.incorrect_answers.filter((e)=>{return e && e}).length<3 || data.correct_answer.length == 0 || data.category.length == 0 || data.question.length == 0){
+    if(data.incorrect_answers.filter((e)=>{return e && e}).length<3 || data.correct_answer.length === 0 || data.category.length === 0 || data.question.length === 0){
       return notifyError('All fields are required')
     }
     post('/question/AddUpdateQuestion',{...data,incorrect_answers:data.incorrect_answers.join("%0")}).then((res)=>{
@@ -65,7 +65,7 @@ export default function CreateTrivia({ setOpenCreateTrivia, Cats,setAddTrivia,qu
               <span className="sr-only">Close popup</span>
             </button>
             <div className="p-5">
-              <h3 className="text-2xl mb-0.5 font-medium" />
+              {/* <h3 className="text-2xl mb-0.5 font-medium" /> */}
               <p className="mb-4 text-sm font-normal text-gray-800" />
               <div className="text-center">
                 <p className="mb-3 text-2xl font-semibold leading-5 text-slate-900">

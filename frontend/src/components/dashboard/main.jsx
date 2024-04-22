@@ -24,7 +24,7 @@ export default function Main() {
   }
   useEffect(()=>{
 getCats()
-  },[])
+  })
   return (
     <>
     <div className="min-h-full">

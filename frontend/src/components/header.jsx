@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Cookies from 'universal-cookie';
 
-import {Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { notifySuccess } from '../utils/alerts';
 import CreateTrivia from './trivia/createTrivia';
 import Profile from './user/profile';
@@ -21,7 +21,7 @@ export default function Header({Cats,setAddTrivia}) {
       <div className="relative flex justify-between lg:gap-8 xl:grid xl:grid-cols-12">
         <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2 py-3">
           <div className="flex flex-shrink-0 items-center">
-            <a href="#" className='text-2xl text-rose-600 font-bold  text-center'>
+            <a href="./index.html" className='text-2xl text-rose-600 font-bold  text-center'>
               Trivia
             </a>
           </div>
@@ -166,7 +166,7 @@ Heroicon name: outline/x-mark"
         </div>
       </div>
     </div>
-    <nav
+    {/* <nav
       xDescription="Mobile menu, show/hide based on menu state."
       className="lg:hidden"
     >
@@ -213,7 +213,7 @@ Heroicon name: outline/x-mark"
         </a>
         
       </div>
-    </nav>
+    </nav> */}
      </header>
      {
       openCreateTrivia &&

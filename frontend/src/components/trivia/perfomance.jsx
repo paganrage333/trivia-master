@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { notifyError, notifySuccess } from "../../utils/alerts";
-import { get, post } from "../../utils/axios";
+// import { notifyError, notifySuccess } from "../../utils/alerts";
+import { get } from "../../utils/axios";
 import CategoryChart from "./CategoryChart";
-import AllDataChart from "./AllDataChart";
+// import AllDataChart from "./AllDataChart";
 
 
 export default function Perfomance({ setOpenPerfomance, Cats,setAddTrivia,que }) {
@@ -14,35 +14,35 @@ export default function Perfomance({ setOpenPerfomance, Cats,setAddTrivia,que })
     
   
   // };
-  let data1 = {
-    labels: ['Wrong', 'Right'],
-    datasets: [
-      {
-        label: 'No of question',
-        data: [10, 20],
+  // let data1 = {
+  //   labels: ['Wrong', 'Right'],
+  //   datasets: [
+  //     {
+  //       label: 'No question',
+  //       data: [10, 20],
         
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
+  //       backgroundColor: [
+  //         'rgba(255, 99, 132, 0.2)',
+  //         'rgba(75, 192, 192, 0.2)',
         
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(75, 192, 192, 1)',
+  //       ],
+  //       borderColor: [
+  //         'rgba(255, 99, 132, 1)',
+  //         'rgba(75, 192, 192, 1)',
           
-        ],
-        borderWidth: 2,
-      },
-    ],
-  };
+  //       ],
+  //       borderWidth: 2,
+  //     },
+  //   ],
+  // };
  
   const getData = ()=>{
     get('/users/getReport').then((res)=>{
       if(res.data){
-        console.log(res.data.map((e)=>{return Cats.find((f)=>{return f.id == e.category})?.name}))
+        console.log(res.data.map((e)=>{return Cats.find((f)=>{return f.id === e.category})?.name}))
          setReportData(
           {
-            labels:  res.data.map((e)=>{return Cats.find((f)=>{return f.id == e.category})?.name}),
+            labels:  res.data.map((e)=>{return Cats.find((f)=>{return f.id === e.category})?.name}),
     
             datasets: [{
               label: 'Data By Category',
@@ -59,7 +59,7 @@ export default function Perfomance({ setOpenPerfomance, Cats,setAddTrivia,que })
  
   useEffect(()=>{
     getData()
-  },[])
+  })
   return (
     <>
       <div class="fixed z-10 inset-0 overflow-y-auto">
@@ -94,7 +94,7 @@ export default function Perfomance({ setOpenPerfomance, Cats,setAddTrivia,que })
             </button>
             <div class="flex w-full md:max-w-xl  rounded shadow mt-7">
             <p href="#" onClick={()=>{setActiveTab(0)}} aria-current="false"
-        class={`w-full flex items-center gap-x-2 justify-center font-medium rounded-r px-5 py-2       ${activeTab == 0 ? 'bg-rose-600  text-white ': "text-gray-800 border  bg-white border-gray-200"} `}>
+        class={`w-full flex items-center gap-x-2 justify-center font-medium rounded-r px-5 py-2       ${activeTab === 0 ? 'bg-rose-600  text-white ': "text-gray-800 border  bg-white border-gray-200"} `}>
         by Category
         
     </p>

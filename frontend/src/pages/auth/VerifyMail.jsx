@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import { get, post } from '../../utils/axios'
+import { get } from '../../utils/axios'
 import { notifyError, notifySuccess } from '../../utils/alerts'
 
 
@@ -37,7 +37,7 @@ function VerifyMail() {
    }
    useEffect(()=>{
         verify()
-   },[])
+   })
 
    const sendMail = ()=>{
     get(`/auth/reSendMail/${token}`).then((res)=>{
@@ -52,7 +52,7 @@ function VerifyMail() {
   return (
   <>
   {
-    success == 0 ? 
+    success === 0 ? 
   <div id="loader" class="absolute bg-transparent flex items-center justify-center w-full h-[100vh] text-gray-900 ">
   <div class="">
     <h1 class=" text-xl md:text-3xl font-bold flex items-center">L<svg stroke="currentColor" fill="currentColor" stroke-width="0"
@@ -65,7 +65,7 @@ function VerifyMail() {
 </div>:
     <div className='flex justify-center h-screen items-center'>
         {
-            success == 1 ? 
+            success === 1 ? 
         <div className='h-[300px] '>
 
     <img src="/images/veried_email.jpg" alt="" className='h-full w-full' />

@@ -13,8 +13,8 @@ export default function CreateTrivia({ setOpenProfile, Cats,setAddTrivia,que }) 
     post('/users/UpdateProfile',{...payload}).then((res)=>{
       if(res.success){
         console.log(res.data.Email,data.Email)
-        console.log(res.data.Email==data.Email)
-        if(res.data.Email != data.Email){
+        console.log(res.data.Email===data.Email)
+        if(res.data.Email !== data.Email){
             post('/users/UpdateEmail',{Email:data.Email}).then((res)=>{
 
                 notifySuccess(res.msg)
@@ -73,7 +73,7 @@ export default function CreateTrivia({ setOpenProfile, Cats,setAddTrivia,que }) 
               <span className="sr-only">Close popup</span>
             </button>
             <div className="p-5">
-              <h3 className="text-2xl mb-0.5 font-medium" />
+              {/* <h3 className="text-2xl mb-0.5 font-medium" alt="head"/> */}
               <p className="mb-4 text-sm font-normal text-gray-800" />
               <div className="text-center">
                 <p className="mb-9 text-2xl font-semibold leading-5 text-slate-900">
@@ -83,7 +83,7 @@ export default function CreateTrivia({ setOpenProfile, Cats,setAddTrivia,que }) 
 
               
               { 
-              updatePass == true ? 
+              updatePass === true ? 
               <>
               <input
                 name="currentPass"
