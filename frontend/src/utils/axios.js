@@ -6,7 +6,7 @@ import Cookies from 'universal-cookie';
 
 const cookies = new Cookies();
 
-export const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:4444/api';
+export const baseURL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api';
 
 const axios = Axios.create({
     baseURL: baseURL,
