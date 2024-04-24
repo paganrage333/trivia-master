@@ -1,0 +1,12 @@
+{"level":"error","message":"500 - connect ECONNREFUSED 127.0.0.1:3306 - /api/auth/login - POST - ::1"}
+{"level":"info","message":"::1 - - [23/Apr/2024:17:38:18 +0000] \"POST /api/auth/login HTTP/1.1\" 500 111 \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36\"\n"}
+{"level":"error","message":"500 - connect ECONNREFUSED 127.0.0.1:3306 - /api/auth/login - POST - ::1"}
+{"level":"info","message":"::1 - - [23/Apr/2024:17:40:47 +0000] \"POST /api/auth/login HTTP/1.1\" 500 111 \"http://localhost:3000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36\"\n"}
+{"level":"error","message":"404 - Api endpoint does not found - / - GET - ::ffff:127.0.0.1"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [23/Apr/2024:17:44:58 +0000] \"GET / HTTP/1.1\" 404 103 \"-\" \"insomnia/8.6.1\"\n"}
+{"level":"error","message":"404 - Api endpoint does not found - / - POST - ::ffff:127.0.0.1"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [23/Apr/2024:17:45:07 +0000] \"POST / HTTP/1.1\" 404 103 \"-\" \"insomnia/8.6.1\"\n"}
+{"level":"error","message":"404 - Api endpoint does not found - /signup - POST - ::ffff:127.0.0.1"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [23/Apr/2024:17:45:18 +0000] \"POST /signup HTTP/1.1\" 404 103 \"-\" \"insomnia/8.6.1\"\n"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'trim') - /api/auth/login - POST - ::ffff:127.0.0.1"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [23/Apr/2024:17:46:39 +0000] \"POST /api/auth/login HTTP/1.1\" 500 128 \"-\" \"insomnia/8.6.1\"\n"}
