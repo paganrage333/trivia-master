@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+My site is deployed at: https://trivia-frontend13.onrender.com
+
+this is the API used: https://opentdb.com/api_config.php
+
+This site utilizes React.js, Node.js, and PostgreSQL
+
+The features of this site include creating a profile, creating trivia questions, flagging questions, login/logout, search through categories
+
